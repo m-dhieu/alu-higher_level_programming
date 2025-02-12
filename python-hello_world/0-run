@@ -1,4 +1,2 @@
 #!/bin/bash
-# Script to run a Python script whose name is stored in the PYFILE environment variable.
-
 python "$PYFILE"
