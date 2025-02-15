@@ -1,2 +1,2 @@
 #!/bin/bash
-python "$PYFILE"
+PYFILE=${PYFILE:-"main.py"} && python3 "${PYFILE}"
