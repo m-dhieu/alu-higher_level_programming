@@ -1,13 +1,30 @@
 #!/bin/bash
 
-# Check if PYFILE is set
+export PYFILE="/tmp/monica/default_script.py"
+
 if [ -z "$PYFILE" ]; then
-    echo "Error: PYFILE environment variable not set."
+    echo "PYFILE environment variable not set. Setting a default value."
+else
+    echo "Using PYFILE: $PYFILE"
+fi
+
+mkdir -p "$(dirname "$PYFILE")"
+touch "$PYFILE"
+
+if [ ! -f "$PYFILE" ]; then
+    echo "Error: File does not exist."
     exit 1
 fi
 
-# Compile the Python file
-python -m py_compile "$PYFILE"
+python3 -m py_compile "$PYFILE"
 
-# Rename the output file to add 'c' at the end
-mv "${PYFILE}c" "${PYFILE}c"
+compiled_file="${PYFILE}c"
+mv "__pycache__/${PYFILE%.py}*.pyc" "$compiled_file" 2>/dev/null
+
+if [ -f "$compiled_file" ]; then
+    echo "Compilation successful. Compiled file: $compiled_file"
+    echo "1"
+else
+    echo "Compilation failed."
+    echo "0"
+fi
