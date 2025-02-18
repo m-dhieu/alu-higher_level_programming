@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("{}".format("".join(chr(i) for i in range(97, 123) if chr(i) not in 'qe')), end="")
+for char in range(97, 123):
+    if char != 101 and char != 113:
+        print(chr(char), end='')
