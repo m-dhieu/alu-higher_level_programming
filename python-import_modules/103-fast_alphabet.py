@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-def magic_calculation(a, b): return sum(__import__('magic_calculation_102').add(sum(__import__('magic_calculation_102').add(a, b) + i for i in range(4, 6)), 0) if a < b else __import__('magic_calculation
+print((lambda s: s.join(map(chr, range(65, 91))))(__import__('').__class__.__base__.__class__.__init__.__globals__['str']()))
