@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 
 
-import dis
+import importlib.util
 
 if __name__ == "__main__":
-    with open("hidden_4.pyc", "rb") as file:
-        bytecode = file.read()
-    
-    names = dis.get_instructions(bytecode)
-    
-    valid_names = [name for name in dir() if not name.startswith("__")]
+    spec = importlib.util.spec_from_file_location("hidden_4", "./hidden_4.pyc")
+    hidden_4 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(hidden_4)
 
-    valid_names.sort()
+    names = dir(hidden_4)
 
-    for name in valid_names:
-        print(name)
+    for name in sorted(names):
+        if not name.startswith("__"):
+            print(name)
