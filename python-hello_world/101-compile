@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import os
+import py_compile
+
+pyfile = os.environ.get("PYFILE")
+
+if pyfile:
+    output_filename = pyfile + "c"
+    try:
+        py_compile.compile(pyfile, cfile=output_filename)
+        print(f"Successfully compiled {pyfile} to {output_filename}")
+    except py_compile.PyCompileError as e:
+        print(f"Error compiling {pyfile}: {e}")
+    except FileNotFoundError:
+        print(f"Error: File {pyfile} not found.")
+else:
+    print("Error: PYFILE environment variable not set.")
