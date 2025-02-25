@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+
+"""
+Module for defining and manipulating squares.
+
+This module provides a Square class with methods to calculate area and perimeter.
+"""
+
 class Square:
     def __init__(self, side_length=0):
         self.side_length = side_length
