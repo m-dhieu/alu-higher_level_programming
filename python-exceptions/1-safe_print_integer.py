@@ -5,6 +5,8 @@ def safe_print_integers(value):
     try:
         print("{:d}".format(value))
         return True
-    except (ValueError, TypeError):
-        print("Exception: ValueError or TypeError")
+    except (ValueError):
+        return False
+     except Exception as e:
+        print(f"An unexpected error occurred: {e}")
         return False
