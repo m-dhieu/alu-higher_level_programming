@@ -7,3 +7,4 @@ def raise_exception_msg(message=""):
     except NameError as e:
         print(f"Caught exception: {e}")
         raise
+
