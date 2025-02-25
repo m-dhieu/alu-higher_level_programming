@@ -2,13 +2,14 @@
 
 
 def magic_calculation(a, b):
-    result = 0
-    try:
-        for i in range(1, a+1):
+     result = 0
+    for i in range(1, 4):
+        try:
             if i > a:
                 raise Exception('Too far')
             result += a ** b / i
-    except Exception:
-        pass
-    finally:
-    return int(result)
+        except Exception as e:
+            print(f"Exception: {e}")
+            continue
+    result = a + b
+    return result
