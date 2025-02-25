@@ -2,9 +2,7 @@
 
 
 """
-Module for defining and manipulating squares.
-
-This module provides a Square class with methods to calculate area and perimeter.
+This module defines a square.
 """
 
 
