@@ -8,6 +8,6 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         print("division by zero")
     finally:
-        if result is not None:
-            print("Inside result: {}".format(result))
+        print("Inside result: {}".format(result))
+        print("{} / {} = {}".format(a, b, result))
         return result
