@@ -1,15 +1,11 @@
 #!/usr/bin/python3
 
 
-"""
-This module defines a square.
-"""
+"""This module defines a square."""
 
 
 class Square:
-    """
-    Represents a square with a given side length.
-    """
+    """Represent a square with a given side length."""
     def __init__(self):
         pass
 
