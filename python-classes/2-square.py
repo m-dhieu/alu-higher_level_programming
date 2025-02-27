@@ -2,7 +2,7 @@
 
 
 """
-This module defines a square whose size must be an integer, otherwise a TypeError is raised. A ValueError is raised if it is less than zero.
+This module defines a square whose size must be an integer, greater than zero.
 """
 
 
