@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
 
+"""
+This module defines a square whose size can be set, retrieved.
+"""
+
 class Square:
     """
     A class representing a square.
