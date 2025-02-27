@@ -7,6 +7,9 @@ This module defines a square whose size must be an integer, otherwise a TypeErro
 
 
 class Square:
+    """
+    Represent a square with a given side length.
+    """
     def __init__(self, size=0):
         """
         Initialize a Square object.
