@@ -32,11 +32,8 @@ class Square:
         """Print the square to stdout.
         If size is zero, print an empty line."""
         if self.size == 0:
-        print("\n", end='')  # Print a newline
+        print()  # Print a newline
         return
 
-    for i in range(self.position[1]):
-        print()
-
     for _ in range(self.size):
-        print(" " * self.position[0] + "#" * self.size)
+            print("#" * self.size)
