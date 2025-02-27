@@ -1,19 +1,13 @@
 #!/usr/bin/python3
 
 
-"""
-This module defines a square whose size must be an integer, greater than zero.
-"""
+"""This module defines a square whose size must be an integer, greater than zero."""
 
 
 class Square:
-    """
-    Represent a square with a given side length.
-    """
+    """Represent a square with a given side length."""
     def __init__(self, size=0):
-        """
-        Initialize a Square object.
-        """
+        """Initialize a Square object."""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
