@@ -6,7 +6,7 @@
 
 class Node:
     """Represent a Node."""
-    
+
     def __init__(self, data, next_node=None):
         """Initialize a Node object."""
         self.data = data
@@ -38,6 +38,8 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Represent a singly linked list."""
+
     def __init__(self):
         """Initialize a SinglyLinkedList object."""
         self.__head = None
@@ -46,9 +48,11 @@ class SinglyLinkedList:
         """Print the entire list in stdout.
         One node number by line."""
         current = self.__head
+        result = []
         while current:
-            print(current.data)
+            result.append(str(current.data))
             current = current.next_node
+        return "\n".join(result)
 
     def sorted_insert(self, value):
         """Insert a new Node into the correct sorted position in the list."""
