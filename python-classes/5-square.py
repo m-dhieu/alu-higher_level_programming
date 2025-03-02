@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-
-"""This module uses public instance method to return current square area."""
+"""This module defines a Square class."""
 
 
 class Square:
     """Represent a square."""
+
     def __init__(self, size=0):
         """Initialize a Square object."""
         self.size = size
@@ -32,8 +32,8 @@ class Square:
         """Print the square to stdout.
         If size is zero, print an empty line."""
         if self.size == 0:
-        print()  # Print a newline
-        return
+            print()  # Print newline
+            return
 
-    for _ in range(self.size):
+        for _ in range(self.size):
             print("#" * self.size)
