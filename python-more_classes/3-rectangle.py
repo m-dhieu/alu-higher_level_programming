@@ -60,3 +60,4 @@ class Rectangle:
         """Return string representation of rectangle."""
         return "<{}.{} object at {}>".format(
             self.__module__, type(self).__name__, hex(id(self))
+            )
