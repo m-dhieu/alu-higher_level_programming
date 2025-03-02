@@ -9,7 +9,8 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("out of range")
                 result.append(0)
                 continue
-            if not isinstance(my_list_1[i], (int, float)) or not isinstance(my_list_2[i], (int, float)):
+            if (not isinstance(my_list_1[i], (int, float)) or
+                    not isinstance(my_list_2[i], (int, float))):
                 print("wrong type")
                 result.append(0)
                 continue
