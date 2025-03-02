@@ -37,7 +37,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set reectangle height."""
+        """Set rectangle height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -55,12 +55,11 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return string representation of rectangle."""
+        """Return string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(
-            [str(self.print_symbol) * self.__width for _ in range(self.__height)]
-        )
+        string_list = [str(self.print_symbol) * self.__width for _ in range(self.__height)]
+        return "\n".join(string_list)
 
     def __repr__(self):
         """Return string representation so a new instance is recreated."""
@@ -70,3 +69,16 @@ class Rectangle:
         """Print message when an instance is deleted."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Return biggest rectangle based on area."""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
