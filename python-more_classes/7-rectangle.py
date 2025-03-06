@@ -37,7 +37,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set reectangle height."""
+        """Set rectangle height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -64,7 +64,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return string representation so a new instance is recreated."""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Print message when an instance is deleted."""
