@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+# Print the name of the function used to print the type of an object
+print("type")
