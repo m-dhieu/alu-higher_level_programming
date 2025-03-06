@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 
-
 import sys
-# Print the name of the function used to print the type of an object
 sys.stdout.write("type")
