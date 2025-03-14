@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """Function to save an object to a file using JSON representation."""
 
 
@@ -17,7 +15,7 @@ def to_json_string(my_obj):
     elif isinstance(my_obj, (int, float)):
         return str(my_obj)
     else:
-        raise TypeError(f"Unsupported type for JSON serialization")
+        raise TypeError(f"Unsupported type {type(my_obj)} for JSON serialization")
 
 
 def dict_to_json(d):
